@@ -1,0 +1,100 @@
+/* Regular Sized Screen :START: */
+
+body {
+    font-family: 'Source Code Pro', monospace;
+  }
+  
+  #navbar {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: white;
+    width: 25vw;
+  }
+  
+  .title {
+    font-family: 'Krona One', sans-serif;
+  }
+  
+  #main-doc {
+    margin-left: 25vw;
+  }
+  
+  .main-section {
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  .main-section li {
+    list-style: none;
+  }
+  
+  .user-txt {
+    color: #00c940;
+  }
+  
+  .green-txt {
+    color: green;
+  }
+  
+  .white-txt {
+    color: white;
+  }
+  
+  .blue-txt {
+    color: #2190cc;
+  }
+  
+  .lefty {
+    margin-left: 10%;
+  }
+  
+  .nav-link {
+    color: green;
+    
+  }
+  
+  .back-top {
+    display: none;
+  }
+  
+  /* Regular Sized Screen :END: */
+  
+  /* Small Sized Screen :START: */
+  
+  @media (max-width: 600px) {
+    #navbar {
+      position: static;
+      text-align: center;
+      width: 100%;
+    }
+    
+    #main-doc {
+      width: 100%;
+      margin: 0px;
+    }
+    
+    .back-top {
+      display: block;
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      text-align: center;
+      background-color: rgba(0,0,0,0.6);
+      text-transform: uppercase;
+      padding: 10px;
+    }
+    
+    .back-top a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  
+  /* Small Sized Screen :END: */
+  
+  

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>
+          <h1 class="title">Bash</h1>
+          <h1 class="title">Reference</h1>
+          <h1 class="title">Manual_</h1>
+        </header>
+      <hr>
+        <ol>
+          <li><a class="nav-link" href="#What_is_Bash">What is Bash?</a></li>
+          <li><a class="nav-link" href="#What_is_a_Shell">What is a Shell?</a></li>
+          <li><a class="nav-link" href="#Definitions">Definitions, please</a></li>
+          <li><a class="nav-link" href="#Basic_Shell_Features">Basic Shell Features!</a></li>
+          <li><a class="nav-link" href="#Shell_Syntax">/Shell Syntax/</a></li>
+        </ol>
+      </nav>
+    
+    <main id="main-doc">
+      <section class="main-section" id="What_is_Bash">
+        <header class="section-header">
+          <h1 class="section-title"><em class="user-txt">user@DOCS</em><em class="white-txt">:</em><em class="blue-txt">~</em><em class="white-txt">$</em> <em class="white-txt">./What-is-Bash.sh</em></h1>
+        </header>
+        <p class="white-txt lefty">Bash is the shell, or command language interpreter, for the GNU operating system. The name is an acronym for the ‘Bourne-Again SHell’, a pun on Stephen Bourne, the author of the direct ancestor of the current Unix shell sh, which appeared in the Seventh Edition Bell Labs Research version of Unix.</p>
+        <p class="white-txt lefty">Bash is largely compatible with sh and incorporates useful features from the Korn shell ksh and the C shell csh. It is intended to be a conformant implementation of the IEEE POSIX Shell and Tools portion of the IEEE POSIX specification (IEEE Standard 1003.1). It offers functional improvements over sh for both interactive and programming use.</p>
+        <p class="white-txt lefty">While the GNU operating system provides other shells, including a version of csh, Bash is the default shell. Like other GNU software, Bash is quite portable. It currently runs on nearly every version of Unix and a few other operating systems - independently-supported ports exist for MS-DOS, OS/2, and Windows platforms.</p>
+      </section>
+      <section class="main-section" id="What_is_a_Shell">
+        <header class="section-header">
+          <h1 class="section-title"><em class="user-txt">user@DOCS</em><em class="white-txt">:</em><em class="blue-txt">~</em><em class="white-txt">$</em> <em class="white-txt">./What-is-a-Shell.sh</em></h1>
+        </header>
+        <p class="white-txt lefty">At its base, a shell is simply a macro processor that executes commands. The term macro processor means functionality where text and symbols are expanded to create larger expressions.</p>
+        <p class="white-txt lefty">A Unix shell is both a command interpreter and a programming language. As a command interpreter, the shell provides the user interface to the rich set of GNU utilities. The programming language features allow these utilities to be combined. Files containing commands can be created, and become commands themselves. These new commands have the same status as system commands in directories such as /bin, allowing users or groups to establish custom environments to automate their common tasks.</p>
+        <p class="white-txt lefty">Shells may be used interactively or non-interactively. In interactive mode, they accept input typed from the keyboard. When executing non-interactively, shells execute commands read from a file.</p>
+        <p class="white-txt lefty">A shell allows execution of GNU commands, both synchronously and asynchronously. The shell waits for synchronous commands to complete before accepting more input; asynchronous commands continue to execute in parallel with the shell while it reads and executes additional commands. The redirection constructs permit fine-grained control of the input and output of those commands. Moreover, the shell allows control over the contents of commands’ environments.</p>
+        <p class="white-txt lefty">Shells also provide a small set of built-in commands (builtins) implementing functionality impossible or inconvenient to obtain via separate utilities. For example, cd, break, continue, and exec cannot be implemented outside of the shell because they directly manipulate the shell itself. The history, getopts, kill, or pwd builtins, among others, could be implemented in separate utilities, but they are more convenient to use as builtin commands. All of the shell builtins are described in subsequent sections.</p>
+        <p class="white-txt lefty">While executing commands is essential, most of the power (and complexity) of shells is due to their embedded programming languages. Like any high-level language, the shell provides variables, flow control constructs, quoting, and functions.</p>
+        <p class="white-txt lefty">Shells offer features geared specifically for interactive use rather than to augment the programming language. These interactive features include job control, command line editing, command history and aliases. Each of these features is described in this manual.</p>
+      </section>
+      <section class="main-section" id="Definitions">
+        <header class="section-header">
+          <h1 class="section-title"><em class="user-txt">user@DOCS</em><em class="white-txt">:</em><em class="blue-txt">~</em><em class="white-txt">$</em> <em class="white-txt">./Definitions.sh</em></h1>
+        </header>
+        <p class="white-txt lefty">These definitions are used throughout the remainder of this manual.</p>
+        <li class="white-txt">--POSIX</li>
+        <p class="white-txt lefty">A family of open system standards based on Unix. Bash is primarily concerned with the Shell and Utilities portion of the POSIX 1003.1 standard.</p>
+        <li class="white-txt">--builtin</li>
+        <p class="white-txt lefty">A command that is implemented internally by the shell itself, rather than by an executable program somewhere in the file system.</p>
+        <li class="white-txt">--control operator</li>
+        <p class="white-txt lefty">A token that performs a control function. It is a newline or one of the following: <code>‘||’, ‘&&’, ‘&’, ‘;’, ‘;;’, ‘;&’, ‘;;&’, ‘|’, ‘|&’, ‘(’, or ‘)’</code>.</p>
+        <li class="white-txt">--field</li>
+        <p class="white-txt lefty">A unit of text that is the result of one of the shell expansions. After expansion, when executing a command, the resulting fields are used as the command name and arguments.</p>
+      </section>
+      <section class="main-section" id="Basic_Shell_Features">
+        <header class="section-header">
+          <h1 class="section-title"><em class="user-txt">user@DOCS</em><em class="white-txt">:</em><em class="blue-txt">~</em><em class="white-txt">$</em> <em class="white-txt">./Basic-Shell-Features.sh</em></h1>
+        </header>
+        <p class="white-txt lefty">Bash is an acronym for ‘Bourne-Again SHell’. The Bourne shell is the traditional Unix shell originally written by Stephen Bourne. All of the Bourne shell builtin commands are available in Bash, The rules for evaluation and quoting are taken from the POSIX specification for the ‘standard’ Unix shell.</p>
+        <p class="white-txt lefty">This chapter briefly summarizes the shell’s ‘building blocks’: commands, control structures, shell functions, shell parameters, shell expansions, redirections, which are a way to direct input and output from and to named files, and how the shell executes commands.</p>
+        <li class="white-txt">--Shell-Syntax</li>
+        <p class="white-txt lefty">What your input means to the shell.</p>
+        <li class="white-txt">--Shell-Comands</li>
+        <p class="white-txt lefty">The types of commands you can use.</p>
+        <li class="white-txt">--Shell Functions</li>
+        <p class="white-txt lefty">Grouping commands by name.</p>
+      </section>
+      <section class="main-section" id="Shell_Syntax">
+        <header class="section-header">
+          <h1 class="section-title"><em class="user-txt">user@DOCS</em><em class="white-txt">:</em><em class="blue-txt">~</em><em class="white-txt">$</em> <em class="white-txt">./Shell-Syntax.sh</em></h1>
+        </header>
+        <p class="white-txt lefty">When the shell reads input, it proceeds through a sequence of operations. If the input indicates the beginning of a comment, the shell ignores the comment symbol (‘#’), and the rest of that line.</p>
+        <p class="white-txt lefty">Otherwise, roughly speaking, the shell reads its input and divides the input into words and operators, employing the quoting rules to select which meanings to assign various words and characters.</p>
+        <p class="white-txt lefty">The shell then parses these tokens into commands and other constructs, removes the special meaning of certain words or characters, expands others, redirects input and output as needed, executes the specified command, waits for the command’s exit status, and makes that exit status available for further inspection or processing.</p>
+      </section>
+      <footer class="back-top">
+        <a ref="#top">Back to the top &#8593</a>
+      </footer>
+    </main>
+</body>
+</html>
